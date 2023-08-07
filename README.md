@@ -37,15 +37,10 @@ Once the server is running, it will listen on the port specified in your `.env` 
 
 The application uses a logger to handle errors. All errors are logged in the `error.log` file and all information is logged in the `combined.log` file.
 
-## Testing
-
-To run tests, use the following command:
-npm run test
-
 ## License
 
 This project is licensed under the MIT License.
 
 ## Author
 
-Your Name
+Callum
