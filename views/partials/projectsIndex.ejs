@@ -1,0 +1,101 @@
+<section class="bg-gray-800 text-center py-10">
+  <div class="container mx-auto px-4">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <% for (let i = 0; i < projects.length; i++) { %>
+        <div class="project-card">
+          <div class="background" style="background-image: url('<%= projects[i].image %>')" data-rellax-speed="-5"></div>
+          <div class="overlay">
+            <div class="content" data-rellax-speed="2">
+              <h3 class="text-2xl font-bold mb-2"><%= projects[i].title %></h3>
+              <p class="text-base mb-4"><%= projects[i].desc %></p>
+              <a href="/project/<%= projects[i].id %>" class="inline-block bg-gray-700 text-white py-2 px-6 rounded-lg font-medium">View Project</a>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<style>
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+  }
+
+  .project-card .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .project-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+
+  .project-card .content {
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .project-card .content h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card .content p {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card .content a {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+
+  @media screen and (min-width: 640px) {
+    .project-card {
+      height: 350px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .project-card {
+      height: 400px;
+    }
+  }
+</style>
+
+<script>
+  var rellax = new Rellax('.background, .content', {
+    speed: -2,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+  });
+</script>

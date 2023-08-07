@@ -1,0 +1,99 @@
+<!-- Add the Navbar -->
+<nav class="navbar flex flex-wrap items-center justify-between w-full h-16 px-6 md:px-16 relative shadow-sm">
+  <!-- Logo -->
+  <a href="#" class="logo flex items-center justify-center w-24 h-full font-bold text-white">Callum Smith</a>
+  <!-- Responsive Menu button -->
+  <button type="button" class="inline-flex items-center justify-center w-10 h-10 p-2 text-gray-500 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white md:hidden" onclick="toggleMenu()">
+    <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+      <path d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+  <!-- Responsive Menu -->
+  <div class="hidden md:block absolute md:static top-16 left-0 w-full md:w-auto bg-gray-900 z-50" id="menu-items">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-center w-full md:w-auto">
+      <a class="block px-4 py-2 font-medium text-lg hover:text-gray-400 md:mx-2 md:my-0" href="/">Home</a>
+      <a class="block px-4 py-2 font-medium text-lg hover:text-gray-400 md:mx-2 md:my-0" href="/get-a-quote">Get A Quote</a>
+    </div>
+  </div>
+</nav>
+<script>
+// Responsive Menu
+function toggleMenu() {
+  const menuItems = document.getElementById('menu-items');
+  const hamburger = document.querySelector('button svg');
+  menuItems.classList.toggle('hidden');
+  if (menuItems.classList.contains('hidden')) {
+    hamburger.classList.remove('hidden');
+    hamburger.classList.add('block');
+  } else {
+    hamburger.classList.remove('block');
+    hamburger.classList.add('hidden');
+  }
+}
+
+// Dropdown menu
+const dropdowns = document.querySelectorAll('.dropdown');
+dropdowns.forEach(function(dropdown) {
+  const link = dropdown.querySelector('a');
+  const menu = dropdown.querySelector('.dropdown-menu');
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    menu.classList.toggle('hidden');
+  });
+});
+</script>
+
+<style>
+
+.logo {
+font-family: 'Montserrat', sans-serif;
+font-size: 1.5rem;
+}
+.navbar {
+background-color: #111827;
+color: #F3F4F6;
+}
+.navbar a {
+transition: color 0.3s ease-in-out;
+padding: 0.5rem;
+}
+.navbar a:hover {
+color: #FBBF24;
+font-weight: 600;
+}
+.navbar button:focus {
+outline: none;
+}
+.navbar .dropdown:hover .dropdown-menu {
+display: block;
+}
+.dropdown {
+position: relative;
+}
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+z-index: 1;
+min-width: 10rem;
+padding: 0.5rem 0;
+margin: 0.125rem 0 0;
+font-size: 1rem;
+text-align: left;
+background-color: #111827;
+border: 1px solid #F3F4F6;
+border-radius: 0.25rem;
+}
+.dropdown-menu a {
+display: block;
+padding: 0.5rem 1rem;
+color: #F3F4F6;
+text-decoration: none;
+transition: background-color 0.3s ease-in-out;
+}
+.dropdown-menu a:hover {
+background-color: #F3F4F6;
+color: #111827;
+}
+</style>

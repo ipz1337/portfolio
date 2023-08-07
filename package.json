@@ -1,0 +1,37 @@
+{
+  "name": "your-app-name",
+  "version": "1.0.0",
+  "description": "Description of your app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ddos-express": "^0.1.7",
+    "discord-webhook-node": "^1.1.8",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "helmet": "^6.1.5",
+    "html-to-image": "^1.11.11",
+    "mysql2": "^3.2.4",
+    "stripe": "^12.13.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
