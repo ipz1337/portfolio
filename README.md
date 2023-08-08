@@ -1,8 +1,7 @@
-# Your App Name
-
+# Callum.Systems Portfolio
 ## Description
 
-This is a brief description of your application. It's an Express.js application that uses various middleware for functionality such as CORS, sessions, body parsing, cookie parsing, and compression. It also includes a logger and DDoS protection.
+It's an Express.js application that uses various middleware for functionality such as CORS, sessions, body parsing, cookie parsing, and compression. It also includes a logger and DDoS protection.
 
 ## Getting Started
 
@@ -38,15 +37,10 @@ Once the server is running, it will listen on the port specified in your `.env` 
 
 The application uses a logger to handle errors. All errors are logged in the `error.log` file and all information is logged in the `combined.log` file.
 
-## Testing
-
-To run tests, use the following command:
-npm run test
-
 ## License
 
 This project is licensed under the MIT License.
 
 ## Author
 
-Your Name
+Callum
